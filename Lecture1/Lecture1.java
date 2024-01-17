@@ -66,28 +66,5 @@ public class Lecture1 {
         System.out.println(i++);
         // prints i (7)
         System.out.println(i);
-<<<<<<< HEAD
-
-        // Examples of arrays
-
-        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};;
-        int[] numbers = {10, 20, 30, 40};
-        System.out.println(cars[0]);
-        cars[0] = "Toyota";
-        System.out.println(cars[0]);
-        System.out.println(cars.length);
-
-        int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-        System.out.println(myNumbers[1][2]); // Outputs 7
-        myNumbers[1][2] = 9;
-        System.out.println(myNumbers[1][2]); // Outputs 9 instead of 7
-
-
-
-
-
-
-=======
->>>>>>> 2dd87f9 (removed arrays from lecture1)
     }
 }
