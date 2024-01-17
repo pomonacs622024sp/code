@@ -66,6 +66,7 @@ public class Lecture1 {
         System.out.println(i++);
         // prints i (7)
         System.out.println(i);
+<<<<<<< HEAD
 
         // Examples of arrays
 
@@ -86,5 +87,7 @@ public class Lecture1 {
 
 
 
+=======
+>>>>>>> 2dd87f9 (removed arrays from lecture1)
     }
 }
