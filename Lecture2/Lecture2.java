@@ -25,7 +25,7 @@ public class Lecture2 {
         int temperature = 47;
         String message;
 
-        if (temperature < 65) {
+        if (temperature < 64) {
             message = "Too cold";
         }
         // change it to else if to fix
