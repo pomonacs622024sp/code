@@ -150,11 +150,11 @@ public class Lecture2 {
         //worksheet problem 3
         String[] classes = {"PHYS032", "CSCI101", "ANTH051", "CSCI062", "IMAG002"};
         for(String myClass:classes){
-            if(myClass == "CSCI062"){
+            if(myClass.equals("CSCI062")){
                 System.out.println("CSCI062: This is the best class ever, no need to see more");
                 break;
             }
-            else if(myClass == "CSCI101"){
+            else if(myClass.equals("CSCI101")){
                 System.out.println("CSCI101: New CS achievement locked");
                 continue;
             }
