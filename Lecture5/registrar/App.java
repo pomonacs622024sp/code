@@ -32,7 +32,7 @@ public class App {
         System.out.println(student7.getMaxCredits());
         //student advances to next class
         student7 = new SecondYearPomonaStudent(student7.getName(), student7.getEmail(), student7.getId());
-        // System.out.println(student7.getMaxCredits());
+        System.out.println(student7.getMaxCredits());
 
         
         PomonaStudent[] students = new PomonaStudent[7];
