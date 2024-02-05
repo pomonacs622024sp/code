@@ -38,7 +38,12 @@ public class Animal {
     }
 
     public String toString(){
-        return "Name: " + name + "\nAge: " + age +"\nDays in rescue:" + daysInRescue +"\n";
+        return "Name: " + name + "\nAge: " + age +"\nDays in rescue: " + daysInRescue +"\n";
+    }
+
+    public static void main(String[] args) {
+        Animal animal = new Animal("Rex", 2, 3);
+        System.out.println(animal);
     }
 
     

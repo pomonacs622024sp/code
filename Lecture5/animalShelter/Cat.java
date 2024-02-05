@@ -20,4 +20,9 @@ public class Cat extends Animal{
     public String toString(){
         return super.toString() + "Cat fur: " + fur + "\n";
     }
+
+    public static void main(String[] args) {
+        Cat myCat = new Cat("Fluffy", 2, 3, "long");
+        System.out.println(myCat);
+    }
 }

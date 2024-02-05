@@ -14,4 +14,9 @@ public class Dog extends Animal{
     public String toString(){
         return super.toString()+ "Dog breed: " + breed + "\n";
     }
+
+    public static void main(String[] args) {
+        Dog myDog = new Dog("Rex", 2, 3, "German Shepherd");
+        System.out.println(myDog);
+    }
 }
