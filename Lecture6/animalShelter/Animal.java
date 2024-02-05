@@ -8,9 +8,10 @@ public class Animal implements Adoptable {
     private static int animalCounter;
     private boolean adopted;
 
-    protected Animal(String name, int age){
+    protected Animal(String name, int age, int daysInRescue){
         this.name = name;
         this.age = age;
+        this.daysInRescue = daysInRescue;
         animalCounter++;
     }
 
@@ -53,5 +54,8 @@ public class Animal implements Adoptable {
         adopted = true;
     }
 
+    public String makeHappyNoise(){
+        return "I was adopted hooray!";
+    }
     
 }

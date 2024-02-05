@@ -7,9 +7,10 @@ public class Animal {
     private int daysInRescue;
     private static int animalCounter;
 
-    protected Animal(String name, int age){
+    protected Animal(String name, int age, int daysInRescue){
         this.name = name;
         this.age = age;
+        this.daysInRescue = daysInRescue;
         animalCounter++;
     }
 
@@ -35,6 +36,7 @@ public class Animal {
     protected void setDaysInRescue(int daysInRescue){
         this.daysInRescue =  daysInRescue;
     }
+
     public String toString(){
         return "Name: " + name + "\nAge: " + age +"\nDays in rescue:" + daysInRescue +"\n";
     }
