@@ -150,7 +150,7 @@ public class ArrayList<E> implements List<E>, Iterable<E> {
 	}
 
 	/**
-	 * Retrieves and removes the element from the elementnd of the ArrayList.
+	 * Removes and returns the element from the elementnd of the ArrayList.
 	 * 
 	 * @return the removed E
 	 * @pre size>0
@@ -172,7 +172,7 @@ public class ArrayList<E> implements List<E>, Iterable<E> {
 	}
 
 	/**
-	 * Retrieves and removes the element at the specified index.
+	 * Removes and returns the element at the specified index.
 	 * 
 	 * @param index the index of the element to be removed
 	 * @return the removed element

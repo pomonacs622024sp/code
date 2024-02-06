@@ -9,6 +9,5 @@ interface List<E> {
     E remove();
     E remove(int index);
 	E set(int index, E element);
-
 	int size(); 
 }
