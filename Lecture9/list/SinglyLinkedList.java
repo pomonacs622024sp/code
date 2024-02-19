@@ -124,7 +124,7 @@ public class SinglyLinkedList<E> implements List<E>, Iterable<E>{
 	 * @param index the index of the element to replace
 	 * @param element element to be stored at specified index
 	 * @return the old element that was replaced
-	 * @pre: 0<=index< size
+	 * @pre: 0<=index<size
 	 */
 	public E set(int index, E element) {
 		if (index >= size || index < 0){
@@ -140,7 +140,7 @@ public class SinglyLinkedList<E> implements List<E>, Iterable<E>{
 		// reference old element at index
 		E old = finger.element;
 		
-		//replace element at finer with new element
+		//replace element at finger with new element
 		finger.element = element;
 
 		return old;
@@ -207,7 +207,7 @@ public class SinglyLinkedList<E> implements List<E>, Iterable<E>{
 	 */
 	public String toString() {
 		if (isEmpty()) {
-			return "Singly Linked List: []";
+			return "Singly Linked List: [] Head: null, Size :0";
 		}
 
 		String ret = "Singly Linked List: [";
@@ -220,6 +220,7 @@ public class SinglyLinkedList<E> implements List<E>, Iterable<E>{
 
 		ret += "->] Head: ";
 		ret += head.element;
+		ret += ", Size: " + size;
 		return ret;
 	}
 
@@ -280,6 +281,9 @@ public class SinglyLinkedList<E> implements List<E>, Iterable<E>{
 		sll.clear();
 		System.out.println(sll);
 		System.out.println(sll.size());
+		sll.add(1);
+		System.out.println(sll);
+
 	}
 
 }
