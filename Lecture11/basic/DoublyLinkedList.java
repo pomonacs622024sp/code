@@ -215,8 +215,6 @@ public class DoublyLinkedList<E> implements List<E>, Iterable<E> {
 		} else {
 			head.prev = null;
 		}
-		oldHead.next = null;
-
 		size--;
 
 		return oldHead.element;

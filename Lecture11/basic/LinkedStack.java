@@ -23,16 +23,16 @@ import java.util.NoSuchElementException;
  * @author Alexandra Papoutsaki
  */
 
-public class LinkedStack<Item> implements Stack<Item>, Iterable<Item> {
+public class LinkedStack<E> implements Stack<E>, Iterable<E> {
 
-    private SinglyLinkedList<Item> linkedList;
+    private SinglyLinkedList<E> linkedList;
 
 
     /**
      * Initializes an empty stack.
      */
     public LinkedStack() {
-        linkedList = new SinglyLinkedList<Item>();
+        linkedList = new SinglyLinkedList<E>();
     }
 
     /**
@@ -58,7 +58,7 @@ public class LinkedStack<Item> implements Stack<Item>, Iterable<Item> {
      * 
      * @param item the item to add
      */
-    public void push(Item item) {
+    public void push(E item) {
         linkedList.add(item);
     }
 
@@ -68,7 +68,7 @@ public class LinkedStack<Item> implements Stack<Item>, Iterable<Item> {
      * @return the item most recently added
      * @throws java.util.NoSuchElementException if this stack is empty
      */
-    public Item pop() {
+    public E pop() {
         if (isEmpty()) {
             throw new NoSuchElementException("Stack underflow");
         }
@@ -81,7 +81,7 @@ public class LinkedStack<Item> implements Stack<Item>, Iterable<Item> {
      * @return the item most recently added to this stack
      * @throws java.util.NoSuchElementException if this stack is empty
      */
-    public Item peek() {
+    public E peek() {
         if (isEmpty())
             throw new NoSuchElementException("Stack underflow");
         {
@@ -96,7 +96,7 @@ public class LinkedStack<Item> implements Stack<Item>, Iterable<Item> {
      */
     public String toString() {
         StringBuilder s = new StringBuilder("top -> ");
-        for (Item item : this)
+        for (E item : this)
             s.append(item + " ");
         return s.toString();
     }
@@ -108,7 +108,7 @@ public class LinkedStack<Item> implements Stack<Item>, Iterable<Item> {
      * @return an iterator to this stack that iterates through the items in LIFO
      *         order.
      */
-    public Iterator<Item> iterator() {
+    public Iterator<E> iterator() {
         return linkedList.iterator();
     }
 

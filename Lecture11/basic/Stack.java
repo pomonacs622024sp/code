@@ -6,31 +6,31 @@ package basic;
  * @author David Kauchak
  * @author Alexandra Papoutsaki
  *
- * @param <Item>
+ * @param <E>
  */
 
-public interface Stack<Item>{
+public interface Stack<E>{
 
     /**
      * Pushes an item onto the top of the stack.
      * 
      * @param item the item to be added
      */
-    public void push(Item item);
+    public void push(E item);
 
     /**
      * Removes the item at the top of this stack and returns the item
      * 
      * @return the item at the top of the stack
      */
-    public Item pop();
+    public E pop();
 
     /**
      * Returns the data item at the top of the stack without removing it
      * 
      * @return the data item at the top of the stack
      */
-    public Item peek();
+    public E peek();
 
     /**
      * Tests if the stack is empty

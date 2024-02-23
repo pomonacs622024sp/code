@@ -17,14 +17,14 @@ import java.util.NoSuchElementException;
  * @author Alexandra Papoutsaki
  */
 
-public class LinkedQueue<Item> implements Queue<Item>, Iterable<Item> {
+public class LinkedQueue<E> implements Queue<E>, Iterable<E> {
 
-    private DoublyLinkedList<Item> linkedList;
+    private DoublyLinkedList<E> linkedList;
     /**
      * Initializes an empty queue.
      */
     public LinkedQueue() {
-        linkedList = new DoublyLinkedList<Item>();
+        linkedList = new DoublyLinkedList<E>();
     }
 
     /**
@@ -51,7 +51,7 @@ public class LinkedQueue<Item> implements Queue<Item>, Iterable<Item> {
      * @return the item least recently added to this queue
      * @throws java.util.NoSuchElementException if this queue is empty
      */
-    public Item peek() {
+    public E peek() {
         if (isEmpty()){
             throw new NoSuchElementException("Queue underflow");
         }
@@ -63,7 +63,7 @@ public class LinkedQueue<Item> implements Queue<Item>, Iterable<Item> {
      * 
      * @param item the item to add
      */
-    public void enqueue(Item item) {
+    public void enqueue(E item) {
         linkedList.addLast(item);
     }
 
@@ -73,7 +73,7 @@ public class LinkedQueue<Item> implements Queue<Item>, Iterable<Item> {
      * @return the item on this queue that was least recently added
      * @throws java.util.NoSuchElementException if this queue is empty
      */
-    public Item dequeue() {
+    public E dequeue() {
         if (isEmpty()){
             throw new NoSuchElementException("Queue underflow");
         }
@@ -87,7 +87,7 @@ public class LinkedQueue<Item> implements Queue<Item>, Iterable<Item> {
      */
     public String toString() {
         StringBuilder s = new StringBuilder("front -> ");
-        for (Item item : this)
+        for (E item : this)
             s.append(item + " ");
         s.append("<- end");
         return s.toString();
@@ -98,7 +98,7 @@ public class LinkedQueue<Item> implements Queue<Item>, Iterable<Item> {
      * 
      * @return an iterator that iterates over the items in this queue in FIFO order
      */
-    public Iterator<Item> iterator() {
+    public Iterator<E> iterator() {
         return linkedList.iterator();
     }
     

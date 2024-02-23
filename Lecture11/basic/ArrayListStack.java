@@ -21,16 +21,16 @@ import java.util.NoSuchElementException;
  */
 
  
-public class ArrayListStack<Item> implements Stack<Item>, Iterable<Item> {
+public class ArrayListStack<E> implements Stack<E>, Iterable<E> {
 
-    private ArrayList<Item> arrayList;
+    private ArrayList<E> arrayList;
 
 
     /**
      * Initializes an empty stack.
      */
     public ArrayListStack() {
-        arrayList = new ArrayList<Item>(2);
+        arrayList = new ArrayList<E>(2);
     }
 
     /**
@@ -55,7 +55,7 @@ public class ArrayListStack<Item> implements Stack<Item>, Iterable<Item> {
      * Adds the item to this stack.
      * @param item the item to add
      */
-    public void push(Item item) {
+    public void push(E item) {
         arrayList.add(item);
     }
 
@@ -64,7 +64,7 @@ public class ArrayListStack<Item> implements Stack<Item>, Iterable<Item> {
      * @return the item most recently added
      * @throws java.util.NoSuchElementException if this stack is empty
      */
-    public Item pop() {
+    public E pop() {
         if (isEmpty()){
             throw new NoSuchElementException("Stack underflow");
         }
@@ -77,7 +77,7 @@ public class ArrayListStack<Item> implements Stack<Item>, Iterable<Item> {
      * @return the item most recently added to this stack
      * @throws java.util.NoSuchElementException if this stack is empty
      */
-    public Item peek() {
+    public E peek() {
         if (isEmpty()){
             throw new NoSuchElementException("Stack underflow");
         }
@@ -88,12 +88,12 @@ public class ArrayListStack<Item> implements Stack<Item>, Iterable<Item> {
      * Returns an iterator to this stack that iterates through the items in LIFO order.
      * @return an iterator to this stack that iterates through the items in LIFO order.
      */
-    public Iterator<Item> iterator() {
+    public Iterator<E> iterator() {
         return new ReverseArrayIterator();
     }
 
     // a array iterator, in reverse order
-    private class ReverseArrayIterator implements Iterator<Item> {
+    private class ReverseArrayIterator implements Iterator<E> {
         private int i;
 
         public ReverseArrayIterator() {
@@ -104,11 +104,11 @@ public class ArrayListStack<Item> implements Stack<Item>, Iterable<Item> {
             return i >= 0;
         }
 
-        public Item next() {
+        public E next() {
             if (!hasNext()){
                 throw new NoSuchElementException();
             }
-            Item toReturn = arrayList.get(i);
+            E toReturn = arrayList.get(i);
             i--;
             return toReturn;
         }
@@ -118,7 +118,7 @@ public class ArrayListStack<Item> implements Stack<Item>, Iterable<Item> {
 
 		String ret = "top -> ";
 
-		Iterator<Item> i = this.iterator();
+		Iterator<E> i = this.iterator();
 		while (i.hasNext()) {
 			ret += i.next();
 			ret += " ";

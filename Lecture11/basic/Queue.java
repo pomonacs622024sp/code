@@ -6,31 +6,31 @@ package basic;
  * @author David Kauchak
  * @author Alexandra Papoutsaki
  *
- * @param <Item>
+ * @param <E>
  */
 
-public interface Queue<Item>{
+public interface Queue<E>{
 
     /**
      * Enqueues an item to the end of the queue.
      * 
      * @param item the item to be added
      */
-    public void enqueue(Item item);
+    public void enqueue(E item);
 
     /**
      * Removes and return the item from the front of the queue.
      * 
      * @return the item at the front of the queue.
      */
-    public Item dequeue();
+    public E dequeue();
 
     /**
      * Returns the data item at the front of the queue without removing it
      * 
      * @return the data item at the front of the queue
      */
-    public Item peek();
+    public E peek();
 
     /**
      * Tests if the queue is empty
