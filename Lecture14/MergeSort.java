@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class MergeSort {
 
 	@SuppressWarnings("unchecked")
@@ -42,9 +44,9 @@ public class MergeSort {
 	}
 
 	public static void main(String[] args) {
-		String[] array1 = { "S", "O", "R", "T", "E", "X", "A", "M", "P", "L", "E" };
-		printArray(array1);
-		mergeSort(array1);
-		printArray(array1);
+		String[] array = { "S", "O", "R", "T", "E", "X", "A", "M", "P", "L", "E" };
+		System.out.println(Arrays.toString(array));
+		mergeSort(array);
+		System.out.println(Arrays.toString(array));
 	}
 }
