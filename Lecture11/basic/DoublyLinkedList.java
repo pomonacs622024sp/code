@@ -309,7 +309,7 @@ public class DoublyLinkedList<E> implements List<E>, Iterable<E> {
 		}
 		ret = ret.substring(0, ret.length() - 5);
 
-		ret += " ->] Head: ";
+		ret += "] Head: ";
 		ret += head.element;
 		ret += ", Tail: " + tail.element;
 		ret += ", Size: " + size;

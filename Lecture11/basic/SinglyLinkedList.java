@@ -218,7 +218,7 @@ public class SinglyLinkedList<E> implements List<E>, Iterable<E>{
 		}
 		ret = ret.substring(0, ret.length() - 2);
 
-		ret += "->] Head: ";
+		ret += "] Head: ";
 		ret += head.element;
 		ret += ", Size: " + size;
 		return ret;

@@ -1,4 +1,4 @@
-package list;
+package basic;
 
 import java.util.Iterator;
 
@@ -215,7 +215,6 @@ public class DoublyLinkedList<E> implements List<E>, Iterable<E> {
 		} else {
 			head.prev = null;
 		}
-		
 		size--;
 
 		return oldHead.element;
@@ -310,7 +309,7 @@ public class DoublyLinkedList<E> implements List<E>, Iterable<E> {
 		}
 		ret = ret.substring(0, ret.length() - 5);
 
-		ret += " ->] Head: ";
+		ret += "] Head: ";
 		ret += head.element;
 		ret += ", Tail: " + tail.element;
 		ret += ", Size: " + size;

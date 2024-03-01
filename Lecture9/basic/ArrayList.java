@@ -1,4 +1,4 @@
-package list;
+package basic;
 
 import java.util.NoSuchElementException;
 import java.lang.IndexOutOfBoundsException;

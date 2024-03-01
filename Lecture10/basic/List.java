@@ -1,4 +1,4 @@
-package list;
+package basic;
 
 interface List<E> {
 	void add(E element);
