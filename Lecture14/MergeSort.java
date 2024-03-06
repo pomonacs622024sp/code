@@ -35,13 +35,6 @@ public class MergeSort {
 		}
 	}
 
-	public static <E extends Comparable<E>> void printArray(E[] a) {
-		for (E item : a) {
-			System.out.print(item + " ");
-		}
-		System.out.println();
-
-	}
 
 	public static void main(String[] args) {
 		String[] array = { "S", "O", "R", "T", "E", "X", "A", "M", "P", "L", "E" };
